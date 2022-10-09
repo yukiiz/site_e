@@ -1,0 +1,118 @@
+/*-------------------------スクロールアニメーション---------------------*/
+//js用class
+//.js-scroll-anima
+
+/* 上からフェードイン */
+.anima_down {
+	opacity: 0;
+	transform: translate(0, -30px);
+	transition: all 1s ease-in-out;
+}
+
+/* 下からフェードイン */
+.anima_up {
+	opacity: 0;
+	transform: translate(0, 30px);
+	transition: all 1s ease-in-out;
+}
+
+/* 左からフェードイン */
+.anima_left {
+	opacity: 0;
+	transform: translate(-30px, 0);
+	transition: all 1s ease-in-out;
+}
+
+/* 右からフェードイン */
+.anima_right {
+	opacity: 0;
+	transform: translate(30px, 0);
+	transition: all 1s ease-in-out;
+}
+
+/* その場でフェードイン */
+.anima_in {
+	opacity: 0;
+	transition: all 1s ease-in-out;
+}
+
+/* 左0からフェードイン */
+.anima_left100 {
+	opacity: 0;
+	transform: translate(-100%, 0);
+	transition: all 1s ease-in-out;
+}
+
+/* 右0からフェードイン */
+.anima_right100 {
+	opacity: 0;
+	transform: translate(100%, 0);
+	transition: all 1s ease-in-out;
+}
+
+.typing {
+	animation: typing 2s steps(16), blink 0.5s step-end infinite alternate;
+	font-size: 30px;
+	margin: 0 auto;
+	overflow: hidden;
+	white-space: nowrap;
+	width: 40ch;
+}
+
+@keyframes typing {
+	from {
+		width: 0;
+	}
+}
+
+@keyframes blink {
+	50% {
+		border-color: transparent;
+	}
+}
+
+/*top-mv*/
+.top-anime span {
+	opacity: 0;
+}
+.top-anime_1.appeartext span {
+	animation: text_anime_on_1 1s ease-out forwards;
+}
+.top-anime_2.appeartext span {
+	animation: text_anime_on_2 2s ease-out forwards;
+	animation-delay: 0.5s;
+}
+.top-anime_3.appeartext span {
+	animation: text_anime_on_3 3s ease-out forwards;
+	animation-delay: 0.9s;
+}
+@keyframes text_anime_on_1 {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+@keyframes text_anime_on_2 {
+	0% {
+		opacity: 0;
+	}
+	50% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+@keyframes text_anime_on_3 {
+	0% {
+		opacity: 0;
+	}
+	60% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}

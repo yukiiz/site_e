@@ -1,0 +1,163 @@
+// ===================================================================
+// contact
+// ===================================================================
+.mw_wp_form {
+	width: 100%;
+	table.mailform-tbl {
+		margin-bottom: 40px;
+		width: 100%;
+	}
+
+	table {
+		tr {
+			border-bottom: 1px solid #ccc;
+			font-weight: normal;
+			padding: 30px 0;
+			width: 100%;
+			&:first-child {
+				border-top: 1px solid #ccc;
+			}
+		}
+		th {
+			float: left;
+			font-weight: normal;
+			padding: 20px 0;
+			text-align: left;
+			vertical-align: top;
+			width: 30%;
+			.attention {
+				color: red;
+				font-size: 80%;
+				margin-left: 10px;
+				padding: 3px;
+			}
+		}
+		td {
+			float: left;
+			padding: 20px 0;
+			width: 70%;
+			@include maxsp {
+				width: 65%;
+			}
+		}
+		.w50 {
+			input,
+			select {
+				border: 1px solid #ccc;
+				box-sizing: border-box;
+				padding: 5px;
+				width: 50%;
+				@include maxsp {
+					width: 100%;
+				}
+			}
+		}
+		.w80 {
+			input,
+			select {
+				border: 1px solid #ccc;
+				box-sizing: border-box;
+				width: 80%;
+				@include maxsp {
+					width: 100%;
+				}
+			}
+			textarea {
+				border: 1px solid #ccc;
+				box-sizing: border-box;
+				width: 80%;
+				@include maxsp {
+					width: 100%;
+				}
+			}
+		}
+	}
+	#submit-button {
+		text-align: center;
+		input {
+			background: $sc_b;
+			border: 1px solid $sc_b;
+			border-radius: 5px;
+			box-sizing: border-box;
+			color: white;
+			display: inline-block;
+			font-size: 90%;
+			margin: 1em;
+			padding: 10px 0;
+			transition: all 0.3s;
+			width: 120px;
+			-webkit-appearance: none;
+			&:hover {
+				transform: scale(1.1);
+			}
+		}
+		input[name="submitBack"] {
+			background: white;
+			border: 1px solid $sc_b;
+			border-radius: 5px;
+			box-sizing: border-box;
+			color: $sc_b;
+			display: inline-block;
+			font-size: 90%;
+			margin: 1em;
+			padding: 10px 0;
+			transition: all 0.3s;
+			width: 120px;
+			-webkit-appearance: none;
+			&:hover {
+				transform: scale(1.1);
+			}
+		}
+	}
+	.form_step {
+		align-items: center;
+		display: flex;
+		justify-content: center;
+		list-style: none;
+		margin: 0 0 20px 0;
+		& > li {
+			@include fs(16);
+			border: 1px solid currentColor;
+			color: $sc_b;
+			display: block;
+			font-weight: bold;
+			margin: 0;
+			padding: 0.5em;
+			position: relative;
+			text-align: center;
+			width: 22%;
+			@include maxsp {
+				font-size: 10px;
+				width: 30%;
+			}
+			&:nth-of-type(n + 2) {
+				margin: 0px 0px 0px 4%;
+			}
+			&:nth-of-type(n + 2):before {
+				border-left: 2px solid $sc_b;
+				border-top: 2px solid $sc_b;
+				content: "";
+				height: 0.5em;
+				left: -1.5em;
+				position: absolute;
+				top: 50%;
+				transform: translateY(-50%) rotate(135deg);
+				width: 0.5em;
+			}
+		}
+	}
+}
+.mw_wp_form_input .form_step > li:nth-of-type(1),
+.mw_wp_form_preview .form_step > li:nth-of-type(2),
+.mw_wp_form_complete .form_step > li:nth-of-type(3) {
+	background-color: $sc_b;
+	color: white;
+}
+.contact_member-main,
+.contact_estate-main {
+	.main-content {
+		margin: 65px auto 30px;
+		max-width: 980px;
+		width: 90%;
+	}
+}

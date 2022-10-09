@@ -1,0 +1,280 @@
+//共通ボタン
+$initType: "normal";
+@mixin _btn($type: $initType) {
+	//共通スタイル
+	border-radius: 4px;
+	box-shadow: 2px 2px 4px #333333;
+	display: inline-block;
+	height: 50px;
+	padding: 0 10px;
+	position: relative;
+	text-align: center;
+	transition: 0.3s;
+	-webkit-box-shadow: 2px 2px 4px #333333;
+	a {
+		@include fs(18);
+		@include center;
+		display: block;
+		font-weight: bold;
+		width: 100%;
+		@include maxsp {
+			@include fs(16);
+		}
+		&::after {
+			content: "\f061";
+			font-family: "Font Awesome 5 Free";
+			font-weight: 900;
+			position: absolute;
+			right: 1.2em;
+			text-align: center;
+			@include maxsp {
+				right: 2em;
+			}
+		}
+	}
+	span {
+		padding-left: 10px;
+	}
+	&:hover {
+		transform: scale(1.1);
+	}
+	//【@include _btn;】
+	@if ($type == "normal") {
+		background-color: $sc_b;
+		width: 222px;
+		@include maxsp {
+			width: 90%;
+		}
+		a {
+			color: white;
+		}
+	}
+	//【@include _btn("black");】
+	@else if($type == "black") {
+		background-color: $fc;
+		width: 222px;
+		a {
+			color: white;
+		}
+	}
+	//【@include _btn("white_d");】
+	@else if($type == "white_d") {
+		background-color: white;
+		width: 222px;
+		a {
+			color: $sc_d;
+		}
+	}
+	//【@include _btn("white_l");】
+	@else if($type == "white_l") {
+		background-color: white;
+		width: 222px;
+		a {
+			color: $sc_l;
+		}
+	}
+	//【@include _btn("white");】
+	@else if($type == "white") {
+		background-color: white;
+		width: 222px;
+		a {
+			color: $sc;
+		}
+	}
+	//【@include _btn("member");】
+	@else if($type == "member") {
+		background-color: $sc_y2;
+		border-radius: 50px;
+		width: 250px;
+		a {
+			color: white;
+		}
+	}
+	//【@include _btn("search");】
+	@else if($type == "search") {
+		background-color: $sc_y2;
+		border-radius: 50px;
+		position: relative;
+		width: 250px;
+		input[type="submit"] {
+			@include fs(18);
+			@include center;
+			background-color: $sc_y2;
+			color: white;
+			display: block;
+			font-weight: bold;
+			@include maxsp {
+				@include fs(16);
+			}
+		}
+		&::after {
+			content: "\f061";
+			font-family: "Font Awesome 5 Free";
+			font-weight: 900;
+			position: absolute;
+			right: 2.2em;
+			text-align: center;
+			top: 50%;
+			transform: translatey(-50%);
+			color: white;
+			@include maxsp {
+				right: 2em;
+			}
+		}
+	}
+	//【@include _btn("estate");】
+	@else if($type == "estate") {
+		background-color: $sc_y2;
+		border-radius: 4px;
+		width: 250px;
+		a {
+			color: white;
+			&:after {
+				display: none;
+			}
+		}
+	}
+	//【@include _btn("flow");】
+	@else if($type == "flow") {
+		background-color: $sc_y2;
+		border-radius: 4px;
+		height: 30px;
+		width: 130px;
+		a {
+			color: white;
+			&:after {
+				display: none;
+			}
+		}
+	}
+	//【@include _btn("member-footer");】
+	@else if($type == "member-footer") {
+		background-color: $sc_y2;
+		border-radius: 4px;
+		height: 70px;
+		max-width: 320px;
+		width: 90%;
+		a {
+			color: white;
+			&:after {
+				display: none;
+			}
+		}
+		span {
+			@include fs(18);
+			color: white;
+			display: block;
+			font-weight: bold;
+			left: 50%;
+			padding-left: 0;
+			position: absolute;
+			top: 50%;
+			transform: translate(-50%, -50%);
+			width: 100%;
+		}
+	}
+}
+
+//会員登録ボタン
+$initType: "normal";
+@mixin _btn01($type: $initType) {
+	//共通スタイル
+	border-radius: 4px;
+	box-shadow: 2px 2px 4px #333333;
+	display: inline-block;
+	height: 50px;
+	padding: 0 10px;
+	position: relative;
+	text-align: center;
+	transition: 0.3s;
+	width: 222px;
+	-webkit-box-shadow: 2px 2px 4px #333333;
+	a {
+		@include fs(18);
+		@include center;
+		display: block;
+		font-weight: bold;
+		width: 100%;
+		@include maxsp {
+			@include fs(16);
+		}
+	}
+	span {
+		padding-left: 10px;
+	}
+	&:hover {
+		transform: scale(1.1);
+	}
+	//【@include _btn;】
+	@if ($type == "normal") {
+		background-color: $sc_b;
+		a {
+			color: white;
+		}
+	}
+	//【@include _btn01("black");】
+	@else if($type == "black") {
+		background-color: $fc;
+		a {
+			color: white;
+		}
+	}
+}
+
+//テキストリンク
+@mixin _link-txt {
+	font-weight: 700;
+	margin: 10px 0;
+	a {
+		border-bottom: 1px solid #1619a4;
+		color: #1619a4;
+		@include maxsp {
+			@include fs(10);
+		}
+	}
+}
+
+//検索ボタン
+@mixin _btn-search {
+	//共通スタイル
+	display: inline-block;
+	height: 50px;
+	padding: 0 10px;
+	text-align: center;
+	transition: 0.3s;
+	position: relative;
+	width: 250px;
+	input[type="submit"] {
+		@include fs(18);
+		@include center;
+		background-color: $sc_y2;
+		border-radius: 50px;
+		box-shadow: 2px 2px 4px #333333;
+		color: white;
+		display: block;
+		font-weight: bold;
+		height: 100%;
+		width: 100%;
+		-webkit-box-shadow: 2px 2px 4px #333333;
+		@include maxsp {
+			@include fs(16);
+		}
+	}
+	&::after {
+		content: "\f061";
+		color: white;
+		font-family: "Font Awesome 5 Free";
+		font-weight: 900;
+		position: absolute;
+		right: 2.2em;
+		text-align: center;
+		top: 50%;
+		transform: translatey(-50%);
+		@include maxsp {
+			right: 2em;
+		}
+	}
+	&:hover {
+		transform: scale(1.1);
+	}
+}

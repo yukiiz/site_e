@@ -1,0 +1,23 @@
+@mixin clearfix {
+	&:after {
+		content: "";
+		clear: both;
+		display: block;
+	}
+}
+
+@mixin sankaku {
+	border-left: 10px solid transparent;
+	border-right: 10px solid transparent;
+	border-top: 10px solid $sc;
+	@include maxsp {
+		margin-top: 2px;
+	}
+}
+
+@mixin center {
+	left: 50%;
+	position: absolute;
+	top: 50%;
+	transform: translate(-50%, -50%);
+}

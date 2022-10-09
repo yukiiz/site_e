@@ -1,0 +1,93 @@
+// ===================================================================
+// pagetop-btn
+// ===================================================================
+
+.pagetop-btn {
+	&.btn-fixed {
+		bottom: 40px;
+		position: fixed;
+		top: inherit;
+		@include maxsp {
+			bottom: 10px;
+			right: 10px;
+		}
+	}
+	&.view {
+		opacity: 1;
+		transition-delay: 0s;
+		visibility: visible;
+	}
+	@include maxsp {
+		right: 5%;
+		top: -40px;
+	}
+}
+.pagetop {
+	a {
+		background: white;
+		border: 2px solid $sc_l;
+		border-radius: 45px;
+		color: $sc_l;
+		display: block;
+		font-size: 14px;
+		height: 50px;
+		opacity: 0;
+		overflow: hidden;
+		padding-top: 45px;
+		position: absolute;
+		right: 50px;
+		width: 50px;
+		@include maxsp {
+			@include fs(11);
+			height: 65px;
+			padding-top: 30px;
+			width: 65px;
+		}
+		&::before {
+			@include sankaku;
+			content: "";
+			display: block;
+			height: 0;
+			left: 30%;
+			position: absolute;
+			top: 37%;
+			transform: rotate(180deg);
+			transition: all 0.1s ease;
+			width: 0px;
+			-webkit-transition: all 0.1s ease;
+			@include maxsp {
+				top: 20%;
+			}
+		}
+		&:hover {
+			@include minpc {
+				background: $sc_l;
+				color: white;
+				@each $var in list {
+				}
+				&::before {
+					background-color: transparent;
+					border-top: 10px solid white;
+				}
+			}
+		}
+	}
+}
+.footer-member,
+.footer-member2 {
+	.pagetop a {
+		border: 2px solid $sc_b2;
+		color: $sc_b2;
+		&::before {
+			border-top: 10px solid $sc_b2;
+		}
+		&:hover {
+			@include minpc {
+				background: $sc_b2;
+				&::before {
+					border-top: 10px solid white;
+				}
+			}
+		}
+	}
+}

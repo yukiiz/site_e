@@ -1,0 +1,41 @@
+@charset "utf-8";
+// ================
+// import
+// ================
+
+//設定用
+@import "./setting/setting";
+
+//mixin
+@import "./mixin/btn";
+@import "./mixin/etc";
+@import "./mixin/font";
+@import "./mixin/mq";
+@import "./mixin/title";
+@import "./mixin/triangle";
+
+//リセットCSS
+@import "./base/reset";
+@import "./base/base";
+
+//module
+@import "./module/header";
+@import "./module/faq";
+@import "./module/footer";
+@import "./module/pagetop";
+@import "./module/page-navi";
+@import "./module/scroll-anima";
+
+//pulgins
+@import "./pulgins/slick";
+
+//page
+@import "./page/blog-detail";
+@import "./page/contact";
+@import "./page/layer-page";
+@import "./page/toppage";
+@import "./page/single-page";
+@import "./page/archive-page";
+@import "./page/sitemap";
+@import "./page/404";
+@import "./page/member";

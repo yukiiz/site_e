@@ -1,0 +1,95 @@
+// ===================================================================
+//sitemap-page
+// ===================================================================
+
+.sitemap {
+	&-columns {
+		display: flex;
+		justify-content: space-between;
+		margin: 0 auto 100px;
+		max-width: 1000px;
+		width: 90%;
+		@include maxsp {
+			flex-direction: column;
+			margin: 0 auto 70px;
+		}
+	}
+	&-column {
+		width: 30%;
+		@include maxsp {
+			margin: 0 auto;
+			width: 90%;
+		}
+	}
+	&-item {
+		li {
+			a {
+				@include fs(15);
+				background: #f0f0f0;
+				color: #333;
+				display: block;
+				font-weight: bold;
+				margin-bottom: 10px;
+				overflow: hidden;
+				padding: 20px 10px 20px 35px;
+				position: relative;
+				text-decoration: none;
+				.en {
+					@include fs(10);
+					border-right: 1px solid #444;
+					margin-right: 5px;
+					padding-right: 5px;
+					vertical-align: middle;
+				}
+				&:before {
+					background: $sc;
+					content: "";
+					display: block;
+					height: 100%;
+					left: -96%;
+					opacity: 0.5;
+					position: absolute;
+					transition: 0.4s;
+					top: 0px;
+					width: 100%;
+				}
+				&:hover,
+				&.current {
+					opacity: 1;
+					&::before {
+						left: 0;
+					}
+				}
+			}
+			ul {
+				li {
+					a {
+						background: none;
+						padding: 15px 10px 15px 35px;
+						&::after {
+							content: "\f054";
+							font-family: "Font Awesome 5 Free";
+							font-size: 20px;
+							left: 10px;
+							margin-left: 0;
+							position: absolute;
+							top: 45%;
+							transform: translatey(-50%) rotate(135deg);
+						}
+						&::before {
+							content: none;
+						}
+						&:hover {
+							color: $sc;
+							&::after {
+								color: $sc;
+								top: 25%;
+								transform: rotate(0deg);
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

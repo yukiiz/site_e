@@ -1,0 +1,226 @@
+//セクションのタイトル
+$initType: "normal";
+@mixin _tit01($type: $initType) {
+	letter-spacing: 3px;
+	.sec-tit {
+		font-family: "Oswald", "Noto Sans JP", sans-serif;
+		margin-bottom: 10px;
+		@include maxsp {
+			margin-bottom: 5px;
+		}
+	}
+	//【@include _tit01;】
+	@if ($type == "normal") {
+		.sec-tit {
+			@include fs(40);
+		}
+		.sec-subtit {
+			@include fs(18);
+			color: $sc_d;
+		}
+		span {
+			padding-left: 15px;
+		}
+		@include maxsp {
+			text-align: center;
+			.sec-tit {
+				@include fs(28);
+			}
+			.sec-subtit {
+				@include fs(15);
+			}
+			span {
+				display: block;
+			}
+		}
+	}
+	//【@include _tit01("white");】
+	@else if($type == "white") {
+		.sec-tit {
+			@include fs(40);
+			color: white;
+		}
+		.sec-subtit {
+			@include fs(18);
+			color: white;
+		}
+		@include maxsp {
+			.sec-tit {
+				@include fs(28);
+			}
+			.sec-subtit {
+				@include fs(15);
+			}
+		}
+	}
+	//【@include _tit01("footer");】
+	@else if($type == "footer") {
+		.sec-tit {
+			@include fs(32);
+			color: white;
+			@include maxtb {
+				text-align: center;
+			}
+		}
+		.sec-subtit {
+			@include fs(15);
+			color: white;
+			@include maxtb {
+				display: block;
+			}
+		}
+		@include maxsp {
+			.sec-tit {
+				@include fs(25);
+			}
+			.sec-subtit {
+				margin-top: 10px;
+			}
+		}
+	}
+	//【@include _tit01("layer");】
+	@else if($type == "layer") {
+		.sec-tit {
+			@include fs(35);
+			line-height: 20px;
+		}
+		.sec-subtit {
+			@include fs(18);
+			color: $sc_d;
+		}
+		span {
+			padding-left: 15px;
+		}
+		@include maxsp {
+			text-align: center;
+			.sec-tit {
+				@include fs(28);
+			}
+			.sec-subtit {
+				@include fs(15);
+			}
+			span {
+				display: block;
+			}
+		}
+	}
+	//【@include _tit01("member");】
+	@else if($type == "member") {
+		.sec-tit {
+			@include fs(35);
+			color: #2c3339;
+			line-height: 20px;
+		}
+		.sec-subtit {
+			@include fs(18);
+			color: #2c3339;
+			margin-right: 0;
+		}
+		span {
+			@include fs(36);
+			color: $sc_b2;
+		}
+		@include maxsp {
+			text-align: center;
+			.sec-tit {
+				@include fs(28);
+			}
+			.sec-subtit {
+				@include fs(15);
+			}
+			span {
+				display: inline-block;
+				@include fs(28);
+			}
+		}
+	}
+	//【@include _tit01("member");】
+	@else if($type == "member_flow") {
+		.sec-tit {
+			@include fs(35);
+			color: #2c3339;
+			font-family: "Noto Sans JP", メイリオ, Meiryo, "-apple-system", "Helvetica Neue", "游ゴシック", "Yu Gothic", YuGothic, Verdana, "M+ 1p", sans-serif;
+			line-height: 20px;
+		}
+		span {
+			@include fs(36);
+			color: $sc_b2;
+		}
+		@include maxsp {
+			text-align: center;
+			.sec-tit {
+				@include fs(28);
+			}
+			span {
+				@include fs(28);
+				display: inline-block;
+			}
+		}
+	}
+}
+
+//ページのタイトル
+@mixin _tit02 {
+	@include fs(21);
+	letter-spacing: 3px;
+	position: relative;
+	&:after {
+		background-color: $sc;
+		bottom: -15px;
+		content: "";
+		height: 7px;
+		left: 0;
+		position: absolute;
+		width: 100%;
+	}
+}
+
+//セミナーリンクのタイトル
+@mixin _tit03 {
+	@include fs(22);
+	@include maxsp {
+		@include fs(17);
+	}
+	&::before {
+		background-color: $sc-y;
+		content: "";
+		display: inline-block;
+		height: 16px;
+		margin-right: 10px;
+		width: 16px;
+		@include maxsp {
+			height: 10px;
+			width: 10px;
+		}
+	}
+	&::after {
+		background-color: $sc_y;
+		content: "";
+		display: inline-block;
+		height: 16px;
+		margin-left: 10px;
+		width: 16px;
+		@include maxsp {
+			height: 10px;
+			width: 10px;
+		}
+	}
+}
+
+@mixin _tit04 {
+	@include fs(40);
+	letter-spacing: 3px;
+	position: relative;
+	&:after {
+		background-color: $sc;
+		bottom: -5px;
+		content: "";
+		height: 7px;
+		left: 0;
+		position: absolute;
+		width: 100%;
+	}
+	@include maxsp {
+		@include fs(26);
+	}
+}

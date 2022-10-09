@@ -1,0 +1,1193 @@
+.layer-page {
+	.member-main {
+		.main-inner {
+			background-color: #f1fbfa;
+			border-top: 45px solid #b5dedc;
+			padding-bottom: 100px;
+		}
+		.sec-breadcrumbs {
+			border-top: 45px solid $sc_g;
+			margin-bottom: 65px;
+			.breadcrumbs {
+				@include maxsp {
+					margin-top: -25px;
+				}
+			}
+		}
+	}
+	.member-layer {
+		@include minpc {
+			padding-top: 95px;
+		}
+	}
+}
+//member-top
+.member-page {
+	.member-main {
+		.main-inner {
+			border-top: none;
+		}
+	}
+	.member-mv {
+		height: 41vw;
+		background-repeat: no-repeat;
+		background-position: center;
+		position: relative;
+		background-size: cover;
+		width: 100%;
+		margin: 0 auto;
+		background-color: $bc2;
+		@include maxtb {
+			height: 100vw;
+		}
+		@include maxsp {
+			height: 140vw;
+		}
+		.mv-inner {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			width: 100%;
+			.mv-tit_01 {
+				@include fs(30);
+				margin-bottom: 20px;
+			}
+			p {
+				@include fs(20);
+				@include maxsp {
+					@include fs(18);
+				}
+			}
+		}
+		.mv-img1 {
+			position: absolute;
+			bottom: -30px;
+			left: 55px;
+			@include maxtb {
+				top: 0;
+				left: auto;
+				right: 0;
+				width: 45%;
+			}
+			@include maxsp {
+				width: 55%;
+			}
+		}
+		.mv-img2 {
+			position: absolute;
+			bottom: -20px;
+			right: 40px;
+			@include maxtb {
+				bottom: -55px;
+				left: 0;
+				width: 58%;
+			}
+			@include maxsp {
+				width: 68%;
+			}
+		}
+	}
+	.main-inner {
+		border-top: none;
+	}
+	.sec-breadcrumbs {
+		display: none;
+	}
+	.member-estate {
+		position: relative;
+		.estate-box {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+			margin-bottom: 0;
+			@include maxsp {
+				margin-bottom: 65px;
+			}
+			&::after {
+				content: "";
+				display: block;
+				width: calc((100% - 100px) / 4);
+				@include maxtb {
+					width: calc((100% - 50px) / 2);
+				}
+				@include maxsp {
+				}
+			}
+		}
+		.box {
+			&-item {
+				display: flex;
+				flex-wrap: wrap;
+				margin: 0 10px 40px;
+				width: calc((100% - 65px) / 3);
+				@include maxtb {
+					margin-bottom: 50px;
+					position: relative;
+					width: calc((100% - 50px) / 2);
+				}
+				@include maxsp {
+					margin: 0 0 53px;
+					width: calc((100% - 15px) / 2);
+					a {
+						display: flex;
+					}
+				}
+
+				a {
+					display: flex;
+					flex-direction: column;
+					width: 100%;
+					&:hover {
+						.box-mask {
+							opacity: 1;
+						}
+						.box-tit {
+							p {
+								color: $sc;
+							}
+						}
+					}
+				}
+			}
+			&-inner {
+				border-radius: 14px;
+				height: 190px;
+				margin-bottom: 7px;
+				overflow: hidden;
+				position: relative;
+				width: 100%;
+				@include maxsp {
+					height: 100px;
+				}
+			}
+			&-mask {
+				background-color: rgba(0, 0, 0, 0.4);
+				height: 100%;
+				left: 0;
+				opacity: 0;
+				position: absolute;
+				top: 0;
+				transition: all 0.5s ease;
+				width: 100%;
+			}
+			&-img {
+				margin: 0 auto 25px;
+				padding-top: 65%;
+				position: relative;
+				width: 100%;
+				@include maxsp {
+					height: 100%;
+					margin: 0 auto 20px;
+					padding-top: 40%;
+				}
+				img {
+					font-family: "object-fit: cover;";
+					height: 100%;
+					object-fit: cover;
+					position: absolute;
+					top: 0;
+					width: 100%;
+				}
+			}
+			&-dec {
+				flex: 1;
+				padding-left: 15px;
+				@include maxsp {
+					width: 100%;
+				}
+			}
+			&-date {
+				color: #707070;
+				margin-bottom: 7px;
+			}
+			&-tit {
+				display: -webkit-box;
+				overflow: hidden;
+				-webkit-line-clamp: 2;
+				-webkit-box-orient: vertical;
+				/*IE対策*/
+				line-height: 1.5em;
+				max-height: 4.5em;
+			}
+			&-txt {
+				display: -webkit-box;
+				margin-bottom: 25px;
+				overflow: hidden;
+				-webkit-line-clamp: 2;
+				-webkit-box-orient: vertical;
+				/*IE対策*/
+				line-height: 1.5em;
+				margin-top: auto;
+				max-height: 4.5em;
+			}
+			&-link {
+				margin-top: auto;
+				margin-bottom: 0;
+				text-align: right;
+				@include maxsp {
+					padding-right: 40px;
+				}
+				.more {
+					color: $sc_y2;
+					margin-right: 0px;
+					padding-right: 20px;
+					position: relative;
+					@include maxsp {
+						margin-right: -15px;
+						padding-right: 0;
+					}
+					&::after {
+						color: $sc_y2;
+						content: "\f061";
+						font-family: "Font Awesome 5 Free";
+						font-weight: 900;
+						position: absolute;
+						right: 0;
+						text-align: center;
+						top: 50%;
+						transform: translatey(-50%);
+						@include maxsp {
+							bottom: -10px;
+							right: -20px;
+							top: auto;
+						}
+					}
+				}
+			}
+		}
+		.sec {
+			&-inner {
+				max-width: 980px;
+				margin: 0 auto;
+				padding-top: 90px;
+				width: 90%;
+				@include maxsp {
+					padding-top: 0;
+				}
+			}
+			&-headline {
+				@include _tit01("member");
+				margin-bottom: 55px;
+				@include maxsp {
+					margin-bottom: 50px;
+				}
+			}
+		}
+		.btn01 {
+			@include _btn("member");
+			margin-bottom: 78px;
+			margin-top: 15px;
+			@include maxsp {
+				margin-bottom: 55px;
+			}
+		}
+	}
+	.member-pickup {
+		position: relative;
+		.slick-arrow:before {
+			border-right: 4px solid $sc_y2;
+			border-top: 4px solid $sc_y2;
+			border-width: initial;
+			content: "";
+			display: inline-block;
+			height: 18px;
+			margin: 0 10px;
+			position: absolute;
+			right: -15%;
+			top: -250%;
+			transform: rotate(225deg);
+			width: 18px;
+			@include maxtb {
+				left: -290%;
+			}
+		}
+		.slick-next::before {
+			top: 375%;
+		}
+		.box {
+			&-item {
+				display: block;
+				margin: 0 5px;
+				@include maxsp {
+					margin: 0 0 32px 0;
+					width: 100%;
+				}
+				a {
+					display: flex;
+					flex-direction: column;
+					height: 100%;
+				}
+			}
+			&-inner {
+				border-radius: 14px;
+				height: 190px;
+				margin-bottom: 7px;
+				overflow: hidden;
+				position: relative;
+				width: 100%;
+				@include maxtb {
+					height: 140px;
+				}
+				@include maxsp {
+					height: 210px;
+				}
+			}
+			&-mask {
+				background-color: rgba(0, 0, 0, 0.4);
+				height: 100%;
+				left: 0;
+				opacity: 0;
+				position: absolute;
+				top: 0;
+				transition: all 0.5s ease;
+				width: 100%;
+			}
+			&-img {
+				margin: 0 auto 25px;
+				padding-top: 65%;
+				position: relative;
+				width: 100%;
+				@include maxsp {
+					height: 100%;
+					margin: 0 auto 20px;
+					padding-top: 40%;
+				}
+				img {
+					font-family: "object-fit: cover;";
+					height: 100%;
+					object-fit: cover;
+					position: absolute;
+					top: 0;
+					width: 100%;
+				}
+			}
+			&-dec {
+				flex: 1;
+				padding-left: 15px;
+				@include maxsp {
+					width: 100%;
+				}
+			}
+			&-date {
+				color: #707070;
+				margin-bottom: 7px;
+			}
+			&-tit {
+				display: -webkit-box;
+				overflow: hidden;
+				-webkit-line-clamp: 2;
+				-webkit-box-orient: vertical;
+
+				/*IE対策*/
+				line-height: 1.5em;
+				max-height: 4.5em;
+			}
+			&-txt {
+				display: -webkit-box;
+				margin-bottom: 25px;
+				overflow: hidden;
+				-webkit-line-clamp: 2;
+				-webkit-box-orient: vertical;
+				/*IE対策*/
+				line-height: 1.5em;
+				margin-top: auto;
+				max-height: 4.5em;
+			}
+			&-link {
+				margin-bottom: 0;
+				margin-top: auto;
+				text-align: right;
+				@include maxsp {
+					padding-right: 40px;
+				}
+				.more {
+					color: $sc_y2;
+					margin-right: 0px;
+					padding-right: 20px;
+					position: relative;
+					@include maxsp {
+						margin-right: -15px;
+						padding-right: 0;
+					}
+					&::after {
+						content: "\f061";
+						color: $sc_y2;
+						font-family: "Font Awesome 5 Free";
+						font-weight: 900;
+						position: absolute;
+						right: 0;
+						text-align: center;
+						top: 50%;
+						transform: translatey(-50%);
+						@include maxsp {
+							bottom: -10px;
+							right: -20px;
+							top: auto;
+						}
+					}
+				}
+			}
+		}
+		.sec {
+			&-inner {
+				margin: 0 auto;
+				max-width: 980px;
+				padding-top: 140px;
+				width: 90%;
+			}
+			&-headline {
+				@include _tit01("member");
+				margin-bottom: 55px;
+				@include maxsp {
+					margin-bottom: 50px;
+				}
+			}
+		}
+	}
+	.member-search {
+		background-color: #f4f4f4;
+		padding: 65px 0 52px;
+		position: relative;
+		@include maxsp {
+			padding-bottom: 30px;
+			padding-top: 70px;
+		}
+		.wrapper {
+			background: #fefefe;
+			margin: 30px auto;
+			max-width: 980px;
+			width: 100%;
+		}
+		.search-form {
+			background: #fff;
+			padding: 45px 20px;
+			@include maxsp {
+				padding: 40px 20px 15px;
+			}
+			.hidden {
+				display: none;
+			}
+			p {
+				margin-right: 20px;
+				@include maxsp {
+					text-align: center;
+				}
+			}
+			label {
+				margin-right: 15px;
+				@include maxsp {
+					margin-bottom: 15px;
+				}
+				span {
+					vertical-align: middle;
+				}
+			}
+			input[type="text"] {
+				background: #fff;
+				border: 1px solid rgb(118, 118, 118);
+				height: 35px;
+				margin-right: 20px;
+				width: 120px;
+			}
+			input[type="checkbox"] {
+				background: #fff;
+				height: 20px;
+				width: 20px;
+				-webkit-appearance: auto;
+			}
+			select {
+				background: #fff;
+				height: 35px;
+				margin-right: 20px;
+				text-align: center;
+				width: 115px;
+				@include maxsp {
+					width: 100%;
+				}
+			}
+			.ajax_2_1 {
+				@include maxsp {
+					margin-top: 20px;
+				}
+			}
+			dl {
+				align-items: center;
+				display: flex;
+				margin-bottom: 20px;
+				@include maxsp {
+					flex-direction: column;
+				}
+			}
+			dt {
+				@include fs(22);
+				padding: 10px 10px 10px 7%;
+				position: relative;
+				text-align: left;
+				width: 20%;
+				@include maxsp {
+					padding: 20px 0 5px;
+					width: 100%;
+					@include fs(18);
+				}
+				span {
+					color: rgba($color: #c1e5e4, $alpha: 0.63%);
+					font-size: 38px;
+					left: 20px;
+					position: absolute;
+					top: -25px;
+					@include maxsp {
+						@include fs(30);
+						left: 0;
+						top: -10px;
+					}
+				}
+			}
+			dd {
+				padding: 10px;
+				text-align: left;
+				width: 80%;
+				@include maxsp {
+					display: flex;
+					flex-direction: column;
+					width: 100%;
+				}
+			}
+			.search-price {
+				dd {
+					display: inline-flex;
+				}
+			}
+		}
+		.sec {
+			&-inner {
+				margin: 0 auto;
+				max-width: 980px;
+				padding-top: 17px;
+				position: relative;
+				width: 90%;
+				@include maxsp {
+					padding-top: 0;
+				}
+			}
+			&-headline {
+				@include _tit01("member");
+				margin-bottom: 55px;
+				@include maxsp {
+					margin-bottom: 46px;
+				}
+			}
+		}
+		.btn01 {
+			@include _btn-search;
+			margin-bottom: 50px;
+			margin-top: 40px;
+			@include maxsp {
+				margin-bottom: 35px;
+			}
+		}
+	}
+	.member-flow {
+		background-color: $bc2;
+		padding-top: 100px;
+		padding-bottom: 75px;
+		position: relative;
+		text-align: center;
+		@include maxsp {
+			padding-bottom: 55px;
+			padding-top: 70px;
+		}
+		.member {
+			&-box {
+				display: flex;
+				justify-content: space-between;
+				margin-bottom: 57px;
+				@include maxtb {
+					flex-direction: column;
+					margin: 0 6% 18px;
+				}
+			}
+		}
+		.box {
+			&-item {
+				background-color: white;
+				border: 4px solid white;
+				border-radius: 14px;
+				padding: 2.5% 3% 4%;
+				position: relative;
+				transition: 0.5s;
+				width: calc((100% - 100px) / 3);
+				@include maxtb {
+					display: flex;
+					flex-direction: column;
+					margin: 0 auto 42px;
+					padding: 7% 3% 12%;
+					width: 60%;
+				}
+				@include maxsp {
+					width: 100%;
+				}
+				&::after {
+					border-right: 4px solid #000;
+					border-top: 4px solid #000;
+					content: "";
+					display: inline-block;
+					height: 18px;
+					margin: 0 10px;
+					position: absolute;
+					right: -15%;
+					top: 50%;
+					transform: translateY(-50%) rotate(45deg);
+					width: 18px;
+					@include maxtb {
+						bottom: -30px;
+						left: 46%;
+						right: auto;
+						top: auto;
+						transform: translatex(-50%) rotate(135deg);
+					}
+				}
+				img {
+					position: absolute;
+				}
+				&_01 {
+					img {
+						bottom: -10px;
+						left: -20px;
+						width: 80px;
+						@include maxtb {
+							right: -40px;
+							top: -35px;
+						}
+					}
+				}
+				&_02 {
+					img {
+						right: -20px;
+						top: 10px;
+					}
+				}
+				&_03 {
+					img {
+						bottom: -43px;
+						right: -70px;
+						@include maxtb {
+							bottom: -60px;
+							left: -40px;
+						}
+					}
+				}
+			}
+			&-item:last-child {
+				&::after {
+					display: none;
+				}
+			}
+			&-num {
+				margin-right: 20px;
+				@include maxtb {
+					margin-bottom: 10px;
+					margin-right: 0;
+				}
+				span {
+					@include fs(24);
+					background-color: white;
+					border-radius: 50%;
+					color: $sc_b2;
+					display: inline-block;
+					margin-bottom: 15px;
+					padding: 2px 12px;
+					transition: 0.5s;
+					@include maxtb {
+						@include fs(19);
+						margin-left: 7px;
+						padding: 2px 10px;
+					}
+					&::before {
+						@include fs(15);
+						content: "STEP";
+						display: block;
+						line-height: 1;
+					}
+				}
+			}
+			&-txt {
+				@include maxsp {
+				}
+			}
+		}
+		.sec {
+			&-inner {
+				margin: 0 auto;
+				max-width: 980px;
+				width: 90%;
+			}
+			&-headline {
+				@include _tit01("member");
+				margin-bottom: 50px;
+			}
+		}
+		.btn01 {
+			@include _btn("member");
+		}
+	}
+	.member-news {
+		padding-bottom: 75px;
+		position: relative;
+		@include maxsp {
+			padding-bottom: 60px;
+		}
+		.news-list {
+			margin-bottom: 60px;
+			@include maxsp {
+				margin-bottom: 37px;
+			}
+		}
+		.list {
+			&-item {
+				background-color: white;
+				border-radius: 4px;
+				box-shadow: 2px 2px 10px rgba($color: #000000, $alpha: 0.06);
+				color: $fc;
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: flex-start;
+				margin: 0 0 0.6em 0;
+				overflow: hidden;
+				padding: 17px 20px;
+				position: relative;
+				width: 100%;
+				&::after {
+					content: "\f061";
+					color: $sc_y2;
+					font-family: "Font Awesome 5 Free";
+					font-weight: 900;
+					position: absolute;
+					right: 1.2em;
+					text-align: center;
+					top: 50%;
+					transform: translatey(-50%);
+					@include maxsp {
+						bottom: -10px;
+						right: 1em;
+						top: auto;
+					}
+				}
+			}
+			&-date {
+				padding-right: 20px;
+			}
+			&-dec {
+				width: 85%;
+				@include maxtb {
+					width: 95%;
+				}
+				a:hover {
+					color: $sc_b2;
+				}
+			}
+			&-tit {
+				display: block;
+			}
+		}
+		.sec {
+			&-inner {
+				margin: 0 auto;
+				max-width: 980px;
+				padding-top: 100px;
+				width: 90%;
+				@include maxsp {
+					padding-top: 70px;
+				}
+			}
+			&-headline {
+				@include _tit01("member");
+				margin-bottom: 52px;
+			}
+		}
+		.btn01 {
+			@include _btn("member");
+		}
+	}
+	.bg {
+		.bg1 {
+			left: 160px;
+			position: absolute;
+			top: -145px;
+			@include maxsp {
+				left: -35vw;
+				top: -40vw;
+			}
+		}
+		.bg2 {
+			position: absolute;
+			right: -240px;
+			top: -125px;
+			@include maxsp {
+				right: -45vw;
+				top: 53vw;
+				transform: rotate(126deg);
+				width: 85%;
+			}
+		}
+		.bg3 {
+			bottom: -330px;
+			left: -190px;
+			position: absolute;
+			@include maxsp {
+				bottom: -85vw;
+				left: -54vw;
+				width: 120%;
+			}
+		}
+		.bg4 {
+			position: absolute;
+			right: -132px;
+			top: 207px;
+			@include maxsp {
+				display: none;
+			}
+		}
+		.bg5 {
+			bottom: -442px;
+			left: -121px;
+			position: absolute;
+			@include maxsp {
+				bottom: -76vw;
+				left: -27vw;
+				width: 60%;
+			}
+		}
+		.bg6 {
+			position: absolute;
+			right: -115px;
+			top: -163px;
+			@include maxsp {
+				right: -20vw;
+				top: -14vw;
+				width: 43%;
+			}
+		}
+		.bg7 {
+			bottom: 20px;
+			left: 98px;
+			position: absolute;
+			@include maxsp {
+				bottom: 8vw;
+				left: -15vw;
+				width: 36%;
+			}
+		}
+		.bg8 {
+			left: -120px;
+			position: absolute;
+			top: 68px;
+			z-index: -1;
+			@include maxsp {
+				left: -25vw;
+				top: 15vw;
+				width: 54%;
+			}
+		}
+		.bg9 {
+			bottom: -147px;
+			position: absolute;
+			right: -92px;
+			@include maxsp {
+				bottom: -20vw;
+				right: -15vw;
+				width: 55%;
+			}
+		}
+	}
+}
+//member-flow
+.flow-page {
+	.flow-inner {
+		background-color: white;
+		border-radius: 10px;
+		box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+		margin: 0 auto;
+		max-width: 1200px;
+		padding: 5% 4% 2%;
+		width: 95%;
+		@include maxsp {
+			padding-top: 10%;
+		}
+	}
+	.sec-headline {
+		@include _tit01("member_flow");
+	}
+	.timeline {
+		margin: 100px auto 0;
+		padding: 0 30px;
+		width: 100%;
+		@include maxsp {
+			margin: 50px auto;
+			padding: 0;
+		}
+		li {
+			list-style: none;
+			padding: 0 0 20px 0;
+			position: relative;
+			&:last-child {
+				.border-line {
+					width: 0;
+				}
+			}
+			ul {
+				display: flex;
+				justify-content: space-between;
+			}
+		}
+		&-num {
+			margin-right: 20px;
+			z-index: 1;
+			@include maxtb {
+				margin-bottom: 10px;
+				margin-right: 0;
+			}
+			.num {
+				@include fs(30);
+				background-color: $sc_g;
+				border-radius: 50%;
+				color: white;
+				display: inline-block;
+				margin-bottom: 15px;
+				padding: 10px 18px;
+				@include maxtb {
+					line-height: 30px;
+					margin-left: 7px;
+					padding: 10px 10px;
+				}
+				@include maxsp {
+					@include fs(20);
+					line-height: 25px;
+					padding: 8px 10px;
+				}
+				&::before {
+					@include fs(20);
+					content: "STEP";
+					display: block;
+					line-height: 1;
+					@include maxsp {
+						@include fs(16);
+					}
+				}
+			}
+		}
+		dl {
+			margin: 1.5em 0 20px 0;
+			@include maxtb {
+				margin: 1.5em 0 20px 15px;
+				padding-top: 5px;
+			}
+		}
+		&-tit {
+			@include fs(25);
+			@include maxsp {
+				@include fs(18);
+			}
+		}
+		.flex {
+			display: flex;
+			justify-content: space-between;
+			@include maxsp {
+				flex-direction: column;
+			}
+		}
+		&-dec {
+			width: 62%;
+			@include maxsp {
+				width: 100%;
+			}
+			p {
+				margin-bottom: 28px;
+				margin-top: 40px;
+				@include maxsp {
+					margin-bottom: 20px;
+					margin-top: 20px;
+				}
+			}
+		}
+		&-btn {
+			margin-bottom: 15px;
+			.btn01 {
+				@include _btn("flow");
+			}
+		}
+		&-phone {
+			@include fs(25);
+			color: $sc_y2;
+			a {
+				color: $sc_y2;
+			}
+		}
+		&-img {
+			width: 36.5%;
+			@include maxtb {
+				margin-top: 30px;
+			}
+			@include maxsp {
+				width: 100%;
+			}
+			img {
+				width: 100%;
+			}
+		}
+	}
+	.border-line {
+		background: $sc_g;
+		height: 0;
+		left: 50%;
+		position: absolute;
+		top: 40px;
+		transform: translateX(-50%);
+		width: 3px;
+		z-index: -1;
+	}
+}
+//search,archive-estate
+.search-results,
+.search-no-results,
+.post-type-archive-estate {
+	.search-conditions {
+		margin-bottom: 50px;
+		padding-right: 5%;
+		text-align: right;
+	}
+	.member-search {
+		padding: 0;
+		position: relative;
+		.search-form {
+			background-color: white;
+			box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+			margin: 65px auto 30px;
+			max-width: 1230px;
+			padding: 95px 20px 45px;
+			@include maxsp {
+				padding: 78px 20px 15px;
+			}
+			.hidden {
+				display: none;
+			}
+			p {
+				margin-right: 20px;
+				@include maxsp {
+					text-align: center;
+				}
+			}
+			label {
+				margin-right: 15px;
+				@include maxsp {
+					margin-bottom: 15px;
+				}
+				span {
+					vertical-align: middle;
+				}
+			}
+			input[type="text"] {
+				background: #fff;
+				border: 1px solid rgb(118, 118, 118);
+				height: 35px;
+				margin-right: 20px;
+				width: 120px;
+			}
+			input[type="checkbox"] {
+				background: #fff;
+				height: 20px;
+				width: 20px;
+				-webkit-appearance: auto;
+			}
+			select {
+				background: #fff;
+				height: 35px;
+				margin-right: 20px;
+				text-align: center;
+				width: 115px;
+				@include maxsp {
+					width: 100%;
+				}
+			}
+			.ajax_2_1 {
+				@include maxsp {
+					margin-top: 20px;
+				}
+			}
+			dl {
+				align-items: center;
+				display: flex;
+				margin-bottom: 20px;
+				@include maxsp {
+					flex-direction: column;
+				}
+			}
+			dt {
+				@include fs(22);
+				padding: 10px 10px 10px 7%;
+				position: relative;
+				text-align: left;
+				width: 20%;
+				@include maxsp {
+					@include fs(18);
+					padding: 20px 0 5px;
+					width: 100%;
+				}
+				span {
+					color: rgba($color: #c1e5e4, $alpha: 0.63%);
+					font-size: 38px;
+					left: 20px;
+					position: absolute;
+					top: -25px;
+					@include maxsp {
+						@include fs(30);
+						left: 0;
+						top: -10px;
+					}
+				}
+			}
+			dd {
+				padding: 10px;
+				text-align: left;
+				width: 80%;
+				@include maxsp {
+					display: flex;
+					flex-direction: column;
+					width: 100%;
+				}
+			}
+			.search-price {
+				dd {
+					display: inline-flex;
+				}
+			}
+		}
+		.sec {
+			&-inner {
+				margin: 0 auto;
+				max-width: 1280px;
+				padding-top: 17px;
+				position: relative;
+				width: 90%;
+				@include maxsp {
+					padding-top: 0;
+				}
+			}
+			&-headline {
+				@include _tit01("member");
+				margin-bottom: 55px;
+				@include maxsp {
+					margin-bottom: 46px;
+				}
+			}
+		}
+		.btn01 {
+			@include _btn-search;
+			margin-bottom: 50px;
+			margin-top: 40px;
+			@include maxsp {
+				margin-bottom: 35px;
+			}
+		}
+	}
+}

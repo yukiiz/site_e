@@ -1,0 +1,420 @@
+// ===================================================================
+// layer-page page-header
+// ===================================================================
+.layer-page {
+	.main-inner {
+		border-top: 45px solid $sc_l;
+		@include maxtb {
+			margin-top: 70px;
+		}
+	}
+	.sec-breadcrumbs {
+		border-top: 45px solid $sc;
+		position: relative;
+	}
+	.breadcrumbs {
+		color: white;
+		margin: -22.5px 20px 0;
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		@include maxsp {
+			margin: -23px 5px 5px;
+		}
+		span {
+			color: white;
+			display: inline-block;
+			@include maxsp {
+				@include fs(10);
+			}
+			a {
+				color: white;
+				margin-right: 5px;
+				@include maxsp {
+					@include fs(10);
+				}
+			}
+		}
+	}
+	.sec {
+		&-inner {
+			max-width: 980px;
+			margin: 65px auto 30px;
+			width: 90%;
+			@include maxsp {
+				margin-top: 48px;
+			}
+		}
+		&-headline {
+			@include _tit01("layer");
+		}
+	}
+}
+// ===================================================================
+// layer-page about-main
+// ===================================================================
+.about-main {
+	.sec-company {
+		@include maxsp {
+			padding-bottom: 20px;
+		}
+		.sec-inner {
+			max-width: 980px;
+			margin: 0 auto;
+			width: 90%;
+		}
+		.company {
+			&-table {
+				background-color: white;
+				box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+				display: flex;
+				flex-wrap: wrap;
+				max-width: 840px;
+				margin: 0 auto;
+				padding: 25px 65px 100px 75px;
+				width: 95%;
+				@include maxsp {
+					padding: 20px 30px 50px;
+				}
+				dt {
+					border-bottom: 2px solid $sc_d;
+					display: inline-block;
+					margin-right: 10%;
+					padding-bottom: 6px;
+					padding-top: 12px;
+					text-align: center;
+					vertical-align: top;
+					width: 15%;
+					@include maxsp {
+						display: block;
+						margin-right: 0;
+						margin-top: 20px;
+						text-align: left;
+						width: 100%;
+					}
+				}
+				dd {
+					border-bottom: 2px dotted $sc_d;
+					display: inline-block;
+					margin-left: 0;
+					padding-bottom: 6px;
+					padding-left: 1%;
+					padding-top: 12px;
+					width: 68%;
+					li {
+						line-height: 1.8;
+					}
+					@include maxsp {
+						border-bottom: none;
+						display: block;
+						width: 100%;
+					}
+				}
+			}
+		}
+	}
+	.sec-access {
+		.access {
+			&-inner {
+				margin: 0 auto;
+				max-width: 740px;
+				width: 85%;
+			}
+			&-tit {
+				@include fs(24);
+				margin-bottom: 10px;
+				@include maxtb {
+					@include fs(16);
+				}
+			}
+			&-txt {
+				padding-left: 4%;
+			}
+		}
+	}
+	.sec-business {
+		.sec-inner {
+			margin: 40px auto 30px;
+			max-width: 955px;
+			width: 90%;
+		}
+		.business {
+			&-inner {
+				padding-bottom: 0;
+			}
+			&-items {
+				margin-bottom: 70px;
+				@include maxsp {
+					margin-bottom: 50px;
+				}
+			}
+		}
+		.item {
+			@include mintb {
+				&-inner {
+					align-items: center;
+					display: flex;
+					justify-content: space-between;
+				}
+				&-pic {
+					width: 37%;
+				}
+				&-details {
+					width: 55%;
+				}
+				&-row {
+					.item-pic {
+						padding-left: 2%;
+					}
+				}
+				&-row_reverse {
+					flex-direction: row-reverse;
+					.item-pic {
+						padding-right: 2%;
+					}
+				}
+				&-tit {
+					@include fs(18);
+					@include minpc {
+						@include fs(25);
+					}
+				}
+			}
+			.item-pic {
+				margin-bottom: 10px;
+			}
+			img {
+				width: 100%;
+			}
+		}
+	}
+	.sec-message {
+		.message {
+			&-box {
+				background-color: #daebf5;
+				border-radius: 5px;
+				box-shadow: 0 3px 6px rgba(0, 0, 0, 0.32);
+				margin: 0 2% 10%;
+				padding: 5% 10%;
+			}
+			&-name {
+				margin-top: 30px;
+				text-align: right;
+			}
+		}
+	}
+}
+// ===================================================================
+// layer-page service-main
+// ===================================================================
+.service-main {
+	.sec-registration {
+		.sec-inner {
+			@include maxsp {
+				margin-top: 48px;
+			}
+		}
+		.registration {
+			&-info {
+				margin-bottom: 60px;
+			}
+		}
+		@include mintb {
+			.registration {
+				&-info {
+					display: flex;
+					justify-content: space-between;
+				}
+				&-benefits {
+					padding: 0 5%;
+				}
+			}
+		}
+		@include mintb {
+			.registration01 {
+				&-pic {
+					width: 43%;
+				}
+				&-details {
+					padding-right: 4.5%;
+					width: 53%;
+				}
+				&-tit {
+					@include fs(22);
+					margin-bottom: 38px;
+					transition-delay: 0.1s;
+				}
+				&-txt {
+					margin-bottom: 30px;
+					transition-delay: 0.8s;
+				}
+			}
+		}
+		.btn01 {
+			@include _btn01;
+		}
+		img {
+			width: 100%;
+		}
+		@include maxsp {
+			.registration01 {
+				&-pic {
+					margin-bottom: 50px;
+				}
+				&-tit {
+					margin-bottom: 15px;
+				}
+				&-txt {
+					margin-bottom: 30px;
+				}
+			}
+		}
+		.registration02 {
+			&-tit {
+				@include fs(20);
+				border-bottom: 2px solid $sc_d;
+				margin-bottom: 65px;
+				@include maxsp {
+					margin-bottom: 30px;
+				}
+			}
+			&-box {
+				background-color: #daebf5;
+				border-radius: 5px;
+				box-shadow: 0 3px 6px rgba(0, 0, 0, 0.32);
+				margin: 0 2%;
+				padding: 4% 6% 1px;
+			}
+			dt {
+				span {
+					@include fs(20);
+					border-bottom: 1px solid $sc_d;
+				}
+			}
+			dd {
+				margin: 20px 0 48px 70px;
+				@include maxsp {
+					margin-bottom: 20px;
+					margin-left: 0;
+				}
+			}
+		}
+	}
+	.sec-private {
+		.sec-inner {
+			margin: 48px auto 90px;
+			max-width: 1020px;
+			@include maxsp {
+				margin-bottom: 30px;
+			}
+		}
+		.private {
+			&-pic {
+				display: flex;
+				justify-content: space-between;
+				margin-bottom: 60px;
+				img {
+					width: calc((100% - 12%) / 3);
+				}
+			}
+		}
+		@include mintb {
+			.private {
+				&-flex {
+					align-items: center;
+					display: flex;
+					justify-content: space-between;
+					padding: 0 6%;
+				}
+				&-txt {
+					width: 50%;
+				}
+				&-btn {
+					padding-right: 10%;
+				}
+			}
+		}
+		@include maxsp {
+			.private-btn {
+				margin-top: 30px;
+				text-align: center;
+			}
+		}
+		.btn01 {
+			@include _btn01;
+		}
+	}
+	.sec-strengths {
+		.sec-inner {
+			margin-bottom: 125px;
+			margin-top: 55px;
+			@include maxsp {
+				margin-bottom: 50px;
+				margin-top: 48px;
+			}
+		}
+		.strengths {
+			&-tit {
+				@include fs(24);
+				margin-bottom: 25px;
+				@include maxsp {
+					@include fs(16);
+					margin: 0 5% 25px;
+				}
+			}
+			&-txt {
+				margin: 0 5% 75px;
+				transition-delay: 0.8s;
+				@include maxsp {
+					margin-bottom: 30px;
+					text-align: left;
+				}
+				ol {
+					text-align: left;
+				}
+				li {
+					margin-bottom: 10px;
+				}
+			}
+			&-img {
+				height: 380px;
+				margin: 0 auto;
+				max-width: 650px;
+				overflow: hidden;
+				width: 100%;
+				@include maxsp {
+					height: auto;
+				}
+				img {
+					height: 100%;
+					object-fit: cover;
+					width: 100%;
+				}
+			}
+		}
+	}
+}
+// ===================================================================
+// layer-page faq-page
+// ===================================================================
+.faq-main {
+	.sec-inner {
+		margin: 65px auto 120px;
+		max-width: 880px;
+		width: 90%;
+		@include maxsp {
+			margin: 48px auto 30px;
+		}
+	}
+}
+// ===================================================================
+// layer-page about-main
+// ===================================================================
+.policy-main {
+	.tit {
+		margin: 30px 0 10px 0;
+	}
+	.contact {
+		margin: 25px 30px 50px;
+	}
+}

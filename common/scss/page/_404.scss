@@ -1,0 +1,32 @@
+// ===================================================================
+// layer-page 404-page
+// ===================================================================
+.error404 {
+	.sec-headline .sec-tit {
+		@include fs(30);
+		line-height: 38px;
+		@include maxsp {
+			@include fs(25);
+		}
+	}
+	.info-txt {
+		margin: 100px 0 150px;
+		@include maxsp {
+			margin: 50px auto;
+		}
+	}
+	.flex {
+		display: flex;
+		justify-content: space-around;
+		@include maxsp {
+			flex-direction: column;
+			text-align: center;
+		}
+	}
+	.info-btn {
+		margin-bottom: 30px;
+	}
+	.btn01 {
+		@include _btn01;
+	}
+}

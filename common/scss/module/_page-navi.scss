@@ -1,0 +1,227 @@
+.sec-paging {
+	height: 70px;
+	margin-top: 90px;
+	margin-bottom: 95px;
+	@include maxsp {
+		margin-bottom: 0;
+	}
+	img {
+		height: auto;
+	}
+	.paging {
+		&-list {
+			display: flex;
+			justify-content: space-around;
+			margin: 0 auto 80px;
+			width: 100%;
+		}
+		&-item {
+			width: 33%;
+			a {
+				color: $fc;
+				display: block;
+				padding: 10px;
+				text-align: center;
+				transition: all 0.3s;
+			}
+			&_prev {
+				a {
+					position: relative;
+					&::before {
+						content: "\f061";
+						font-family: "Font Awesome 5 Free";
+						font-weight: 900;
+						left: 4em;
+						position: absolute;
+						top: 50%;
+						transform: translatey(-50%) rotate(178deg);
+						transition: all 0.2s;
+						@include maxsp {
+							left: 0;
+						}
+					}
+					&:hover {
+						color: $sc;
+						&::before {
+							color: $sc;
+							@include minpc {
+								left: 3.8em;
+							}
+						}
+					}
+				}
+			}
+			&_next {
+				a {
+					color: $fc;
+					display: block;
+					position: relative;
+					&::after {
+						content: "\f061";
+						font-family: "Font Awesome 5 Free";
+						font-weight: 900;
+						position: absolute;
+						right: 4em;
+						top: 50%;
+						transform: translatey(-50%);
+						transition: all 0.2s;
+						@include maxsp {
+							right: 0;
+						}
+					}
+					&:hover {
+						color: $sc;
+						&::after {
+							color: $sc;
+							@include minpc {
+								right: 3.8em;
+							}
+						}
+					}
+				}
+			}
+			&_archive {
+				margin-bottom: 100px;
+				a {
+					color: $fc;
+					display: block;
+					position: relative;
+					&:hover {
+						color: $sc;
+					}
+				}
+			}
+		}
+	}
+}
+
+/*wp-pagenavi base*/
+.page-navi {
+	margin: 20px 0 160px;
+	@include maxsp {
+		margin-bottom: 80px;
+	}
+	.wp-pagenavi {
+		clear: both;
+		text-align: center;
+		a,
+		span {
+			@include fs(20);
+			border: none;
+			color: $sc;
+			margin: 0 5px;
+			padding: 2px 10px;
+			text-align: center;
+			text-decoration: none;
+			white-space: nowrap;
+		}
+		a:hover {
+			background-color: $sc;
+			border: 1px solid $sc;
+			border-radius: 7px;
+			color: white;
+		}
+		span.current {
+			background-color: $sc;
+			border: 1px solid $sc;
+			border-radius: 7px;
+			color: white;
+			font-weight: bold;
+		}
+		@include maxsp {
+			.first,
+			.last,
+			.extend {
+				display: none;
+			}
+		}
+	}
+}
+
+.member-main {
+	.page-navi {
+		margin: 20px 0 10px;
+		.wp-pagenavi {
+			a,
+			span {
+				color: #80b9b7;
+			}
+			a:hover {
+				background-color: #80b9b7;
+				border: none;
+				border-radius: 0;
+				color: white;
+			}
+			span.current {
+				background-color: #80b9b7;
+				border: none;
+				border-radius: 0;
+				color: white;
+			}
+		}
+	}
+	.page-nav {
+		margin-bottom: 60px;
+	}
+	.single-news {
+		.sec-paging {
+			margin-bottom: 0px;
+			.paging-list {
+				margin: 0 auto;
+			}
+			.paging-item {
+				&_prev {
+					a {
+						&::before {
+							@include maxtb {
+								left: 2em;
+							}
+							@include maxsp {
+								left: 0;
+							}
+						}
+						&:hover {
+							color: $sc_b2;
+							&::before {
+								color: $sc_b2;
+							}
+						}
+					}
+				}
+				&_next {
+					a {
+						&::after {
+							@include maxtb {
+								right: 2em;
+							}
+							@include maxsp {
+								right: 0;
+							}
+						}
+						&:hover {
+							color: $sc_b2;
+							&::after {
+								color: $sc_b2;
+							}
+						}
+					}
+				}
+				&_archive {
+					a {
+						&:hover {
+							color: $sc_b2;
+							&::after {
+								color: $sc_b2;
+							}
+						}
+					}
+				}
+				a {
+					@include maxsp {
+						padding: 5px;
+					}
+				}
+			}
+		}
+	}
+}
